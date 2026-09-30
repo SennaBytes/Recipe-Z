@@ -1,0 +1,94 @@
+----------------------------------------- NOTES -------------------------------------------
+----------------------------------------- USERS -------------------------------------------
+
+
+-- CREATE TABLE users(
+--     id INTEGER PRIMARY KEY AUTOINCREMENT,
+--     email TEXT,
+--     username TEXT,
+--     password TEXT
+-- );
+
+-- DROP TABLE users;
+
+SELECT * FROM users;
+
+INSERT INTO users( email, username, password)
+VALUES ( '103580@glr.com', 'SennaBytes', 'test');
+
+
+----------------------------------------- RECIPES -------------------------------------------
+
+
+-- CREATE TABLE recipes(
+--     id INTEGER PRIMARY KEY AUTOINCREMENT,
+--     userId INTEGER,
+--     recipeId INTEGER,
+--     title TEXT,
+--     mealType TEXT,
+--     servings INTEGER
+-- );
+
+SELECT * FROM recipes;
+
+-- INSERT INTO recipes (userId, recipeId, title, mealType, servings)
+-- VALUES ('','', 'Pizza', 'Dinner', 2);
+
+UPDATE recipes SET recipeId = 2 WHERE title = 'Pasta Bolognese';
+
+ALTER TABLE recipes
+ADD COLUMN test_column INTEGER
+REFERENCES ingredients(recipeId);
+
+
+ALTER TABLE recipes
+DROP test_column;
+
+----------------------------------------- INGREDIENTS -------------------------------------------
+
+
+-- CREATE TABLE ingredients(
+--     id INTEGER PRIMARY KEY AUTOINCREMENT,
+--     recipeId INTEGER,
+--     ingredient TEXT,
+--     amount REAL,
+--     unit TEXT,
+--     FOREIGN KEY (recipeId) REFERENCES recipes(id)
+-- );
+
+SELECT * FROM ingredients;
+
+-- ALTER TABLE ingredients
+-- RENAME COLUMN ingredient TO name;
+
+INSERT INTO ingredients (recipeId, name, amount, unit)
+VALUES ('3','Tomato purée', '250', 'mL');
+
+
+UPDATE ingredients SET name = 'Pesto', amount = 60 WHERE id = 1;
+
+
+SELECT recipes.title, ingredients.name
+FROM recipes
+LEFT JOIN ingredients
+ON recipes.recipeId = ingredients.recipeId;
+
+
+----------------------------------------- INSTRUCTIONS -------------------------------------------
+
+
+-- CREATE TABLE instructions (
+--     id INTEGER PRIMARY KEY AUTOINCREMENT,
+--     recipeId INTEGER,
+--     step INTEGER,
+--     instruction TEXT,
+--     FOREIGN KEY (recipeId) REFERENCES recipes(id)
+-- );
+
+SELECT * FROM instructions;
+
+-- INSERT INTO instructions ()
+-- VALUES ();
+
+
+----------------------------------------- END NOTES -------------------------------------------

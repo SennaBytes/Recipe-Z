@@ -26,11 +26,11 @@
 <hr>
 
 
-![Empathy map](./assets/img/doggo-eating.jpg)
+![Empathy map](../img/doggo-eating.jpg)
 <h1>I accept crumbs</h1>
 
 <hr>
 
-![Empathy map](./assets/img/totally-spies.gif)
+![Empathy map](../img/totally-spies.gif)
 <br>
 <strong>Girrlllll</strong>

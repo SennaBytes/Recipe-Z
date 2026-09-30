@@ -8,7 +8,7 @@
 * *[Bijv: Gezond willen eten, maar het mag max 20 minuten duren]*
 
 ## 2. Empathy Map (Visueel)
-![Empathy Map](./assets/empathy-map-v1.png)
+![Empathy Map](../img/doggo-eating.jpg)
 
 ## 3. Conclusie
 *Wat is het belangrijkste inzicht dat we meenemen naar de Define fase?*
