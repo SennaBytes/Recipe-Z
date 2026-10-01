@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+header {
+  background: #64396d;
+  color: white;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.box {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.login-box {
+  width: 90%;
+  max-width: 380px;
+  margin: 80px auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button,
+.button {
+  display: inline-block;
+  background: #64396d;
+  color: white;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 18px;
+  padding: 11px 16px;
+  border-radius: 5px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.recipe-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.recipe-card h3 {
+  margin-top: 0;
+}
+
+.small {
+  color: #666;
+  font-size: 14px;
+}
+
+.message {
+  background: #e8f3e8;
+  border: 1px solid #91b891;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+  header {
+    display: block;
+  }
+
+  nav {
+    margin-top: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  .filters,
+  .recipes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.center {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.center a {
+  color: #64396d;
+}
+
+.message.error {
+  background: #f8e3e3;
+  border-color: #c98b8b;
+}
